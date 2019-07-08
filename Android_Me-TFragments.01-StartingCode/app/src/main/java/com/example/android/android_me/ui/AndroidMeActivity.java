@@ -22,20 +22,47 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.android.android_me.R;
+import com.example.android.android_me.data.AndroidImageAssets;
 
 // This activity will display a custom Android image composed of three body parts: head, body, and legs
-public class AndroidMeActivity extends AppCompatActivity {
+public class  AndroidMeActivity extends AppCompatActivity {
 
-    //TODO(1) Create a layout that displays the one body part image named fragment_body_part.xml
+    //Complete(1) Create a layout that displays the one body part image named fragment_body_part.xml
         // This layout should contain one single ImageView
-    //TODO(2) Create a new class called BodyPartFargment to display  an image of an Android-Me body part
+    //Complete(2) Create a new class called BodyPartFargment to display  an image of an Android-Me body part
         // in this class, you'll need to implement an empty constructor and the onCreateView()
-    //TODO(3) Show the first image in the list of head  image
+    //Complete(3) Show the first image in the list of head  image
         //Soon, you'll update this image display code to show any image you want
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_me);
+
+        BodyPartFragment headFragment = new BodyPartFragment();
+        headFragment.setmImageIds(AndroidImageAssets.getHeads());
+        headFragment.setmListIndex(1);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        fragmentManager.beginTransaction().add(R.id.head_container,headFragment).commit();
+
+        BodyPartFragment bodyFragment = new BodyPartFragment();
+        bodyFragment.setmImageIds(AndroidImageAssets.getBodies());
+        bodyFragment.setmListIndex(1);
+        fragmentManager.beginTransaction().add(R.id.body_container,bodyFragment).commit();
+
+        BodyPartFragment legFragment = new BodyPartFragment();
+        legFragment.setmImageIds(AndroidImageAssets.getLegs());
+        legFragment.setmListIndex(1);
+        fragmentManager.beginTransaction().add(R.id.leg_container,legFragment).commit();
+
+
+
+
+
+
+
+
         // TODO (5) Create a new instance of BodyPartFragment and display it using FragmentManager
 
     }
