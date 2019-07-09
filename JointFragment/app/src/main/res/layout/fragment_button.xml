@@ -3,15 +3,18 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorAccent"
-    android:backgroundTint="@color/colorPrimaryDark"
     android:padding="16dp"
     android:gravity="center_horizontal"
+
     >
-    
-    <EditText
-        android:id="@+id/Display"
+
+    <Button
+        android:id="@+id/OK"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="OK"
+        android:textSize="50sp"
         />
 
 </LinearLayout>
