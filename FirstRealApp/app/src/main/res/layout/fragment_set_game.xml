@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetGameFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv_set_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SELECT"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/category_arrays"
+        android:prompt="@string/category"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@id/difficulty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_set_game"
+        tools:ignore="MissingConstraints">
+
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/difficulty"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/difficulty_arrays"
+        android:prompt="@string/level"
+        android:spinnerMode="dialog"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toTopOf="@id/btn_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="PLAY"
+        app:layout_constraintVertical_bias="0.7"
+        android:textColor="@color/White"
+        app:layout_constraintTop_toBottomOf="@id/difficulty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,5 +8,10 @@ import retrofit2.http.Query;
 
 public interface TriviaService {
     @GET("/api.php")
-    Call<TriviaResponse>loadQuestions(@Query("amount") int amount);
+    Call<TriviaResponse>loadQuestions(
+            @Query("amount") int amount,
+            @Query("category") String category,
+            @Query("difficulty") String level,
+            @Query("type") String type
+    );
 }

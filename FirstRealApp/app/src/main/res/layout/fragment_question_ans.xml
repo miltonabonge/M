@@ -21,7 +21,7 @@
         />
 
     <TextView
-        android:id="@+id/AnsA"
+        android:id="@+id/ansA"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/btn_a"
@@ -36,15 +36,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="A"
+        android:background="@color/colorAccent"
+        android:textColor="@color/White"
         android:layout_margin="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/AnsA"
+        app:layout_constraintEnd_toStartOf="@+id/ansA"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_question"
         app:layout_constraintBottom_toTopOf="@id/btn_b"
         />
 
     <TextView
-        android:id="@+id/AnsB"
+        android:id="@+id/ansB"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/btn_b"
@@ -59,15 +61,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="B"
+        android:background="@color/colorAccent"
+        android:textColor="@color/White"
         android:layout_margin="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_a"
-        app:layout_constraintEnd_toStartOf="@id/AnsB"
+        app:layout_constraintEnd_toStartOf="@id/ansB"
         app:layout_constraintBottom_toTopOf="@id/btn_c"
         />
 
     <TextView
-        android:id="@+id/AnsC"
+        android:id="@+id/ansC"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/btn_c"
@@ -81,16 +85,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="c"
+        android:background="@color/colorAccent"
+        android:textColor="@color/White"
         android:layout_margin="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_b"
-        app:layout_constraintEnd_toStartOf="@id/AnsC"
+        app:layout_constraintEnd_toStartOf="@id/ansC"
         app:layout_constraintBottom_toTopOf="@id/btn_d"
         />
 
 
     <TextView
-        android:id="@+id/AnsD"
+        android:id="@+id/ansD"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/btn_d"
@@ -105,11 +111,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="D"
+        android:background="@color/colorAccent"
+        android:textColor="@color/White"
         android:layout_margin="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_c"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/AnsD"
+        app:layout_constraintEnd_toStartOf="@id/ansD"
+        />
+
+    <Button
+        android:id="@+id/btn_RESTART"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D"
+        android:background="@color/colorAccent"
+        android:textColor="@color/White"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+        <!--android:visibility="gone"-->
+
         />
 
 
